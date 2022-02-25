@@ -17,7 +17,7 @@
 #include "addCats.h"
 #include "config.h"
 
-int addCat( char nameToAdd[][], enum gender isGender, enum breed isBreed, bool isFixedNew, float weightNew ){
+int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isFixedNew, float weightNew ){
     int index = 0;
     if(currentNumberOfCats >= MAX_CATS){
         fprintf( stderr, "%s: CurrentNumberOfCats exceeds maximum allowed cats in database.\n", PROGRAM_NAME);
@@ -51,7 +51,7 @@ int addCat( char nameToAdd[][], enum gender isGender, enum breed isBreed, bool i
         while((name[index] != NULL) && (MAX_CATS > index)){ //searching for first empty spot
             index++;
         }
-        Cat[index][0].name = nameToAdd;
+        cat[index][0].name = nameToAdd;
         genderOfCat[index] = isGender;
         breedOfCat[index] = isBreed;
         isFixed[index] = isFixedNew;
