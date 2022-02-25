@@ -17,7 +17,7 @@
 #include "addCats.h"
 #include "config.h"
 
-int addCat( char nameToAdd[MAX_NAME_LENGTH], enum gender isGender, enum breed isBreed, bool isFixedNew, float weightNew ){
+int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isFixedNew, float weightNew ){
     int index = 0;
     if(currentNumberOfCats >= MAX_CATS){
         fprintf( stderr, "%s: CurrentNumberOfCats exceeds maximum allowed cats in database.\n", PROGRAM_NAME);
@@ -40,7 +40,7 @@ int addCat( char nameToAdd[MAX_NAME_LENGTH], enum gender isGender, enum breed is
     }
     else {
         index=0;
-        while((nameToAdd != Cat[index].name) && (MAX_CATS != index)) { //looking to see if name already exists
+        while((nameToAdd != catsstruct[index].name) && (MAX_CATS != index)) { //looking to see if name already exists
             if(nameToAdd == name[index]) {
                 fprintf( stderr, "%s: Name already exists\n", PROGRAM_NAME);//print if name of cat already exists
                 return 0;
@@ -51,7 +51,7 @@ int addCat( char nameToAdd[MAX_NAME_LENGTH], enum gender isGender, enum breed is
         while((name[index] != NULL) && (MAX_CATS > index)){ //searching for first empty spot
             index++;
         }
-        strcpy(Cat[index].name, nameToAdd);
+        strcpy(catsstruct[index].name, nameToAdd);
         genderOfCat[index] = isGender;
         breedOfCat[index] = isBreed;
         isFixed[index] = isFixedNew;
