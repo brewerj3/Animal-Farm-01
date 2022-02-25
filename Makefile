@@ -1,12 +1,12 @@
 ###############################################################################
 ### University of Hawaii, College of Engineering
-### @brief Lab 05d - animalFarm 0 - EE 205 - Spr 2022
+### @brief Lab 05d - Animal Farm 1 - EE 205 - Spr 2022
 ###
 ### @file Makefile
 ### @version 1.0 - Initial version
 ###
 ### @author Joshua Brewer <brewerj3@hawaii.edu>
-### @date 16_Feb_2022
+### @date 25_Feb_2022
 ###
 ### @see https://www.gnu.org/software/make/manual/make.html
 ###############################################################################

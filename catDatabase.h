@@ -6,7 +6,7 @@
 /// @version 1.0
 ///
 /// @author Joshua Brewer <brewerj3@hawaii.edu>
-/// @date   @todo 25_Feb_2022
+/// @date   25_Feb_2022
 ///////////////////////////////////////////////////////////////////////////////
 
 #define MAX_NAME_LENGTH ( 30 )

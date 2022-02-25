@@ -6,7 +6,7 @@
 /// @version 1.0
 ///
 /// @author Joshua Brewer <brewerj3@hawaii.edu>
-/// @date   @todo 25_Feb_2022
+/// @date   25_Feb_2022
 ///////////////////////////////////////////////////////////////////////////////
 
 extern int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isFixedNew, float weightNew ) ;
