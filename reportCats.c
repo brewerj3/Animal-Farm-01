@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///         University of Hawaii, College of Engineering
-/// @brief  Lab 05d - Animal Farm 1 - EE 205 - Spr 2022
+/// @brief  Lab 07d - Animal Farm 1 - EE 205 - Spr 2022
 ///
 /// @file reportCats.c
 /// @version 1.0
@@ -8,12 +8,13 @@
 /// @author Joshua Brewer <brewerj3@hawaii.edu>
 /// @date   25_Feb_2022
 ///////////////////////////////////////////////////////////////////////////////
-
-#include "catDatabase.h"
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+
+#include "catDatabase.h"
 #include "reportCats.h"
-#include <string.h>
+#include "config.h"
 
 int printCat( int index ) {
    if( (name[index] == NULL) || (index < 0) || (index > MAX_CATS)){

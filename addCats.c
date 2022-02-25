@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///         University of Hawaii, College of Engineering
-/// @brief  Lab 05d - Animal Farm 1 - EE 205 - Spr 2022
+/// @brief  Lab 07d - Animal Farm 1 - EE 205 - Spr 2022
 ///
 /// @file addCats.c
 /// @version 1.0
@@ -10,10 +10,12 @@
 ///////////////////////////////////////////////////////////////////////////////
 #include <stdio.h>
 #include <stdlib.h>
-#include "catDatabase.h"
 #include <string.h>
 #include <stdbool.h>
+
+#include "catDatabase.h"
 #include "addCats.h"
+#include "config.h"
 
 int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isFixedNew, float weightNew ){
     int index = 0;

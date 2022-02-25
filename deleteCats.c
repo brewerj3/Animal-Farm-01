@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///         University of Hawaii, College of Engineering
-/// @brief  Lab 05d - Animal Farm 1 - EE 205 - Spr 2022
+/// @brief  Lab 07d - Animal Farm 1 - EE 205 - Spr 2022
 ///
 /// @file deleteCats.c
 /// @version 1.0
@@ -10,8 +10,11 @@
 ///////////////////////////////////////////////////////////////////////////////
 #include <stdio.h>
 #include <stdbool.h>
+
 #include "catDatabase.h"
 #include "deleteCats.h"
+#include "config.h"
+
 void deleteAllCats(){
    printf("Deleting all cats. \n");
    currentNumberOfCats = 0;

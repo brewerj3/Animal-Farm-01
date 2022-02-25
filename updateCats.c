@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///         University of Hawaii, College of Engineering
-/// @brief  Lab 05d - Animal Farm 1 - EE 205 - Spr 2022
+/// @brief  Lab 07d - Animal Farm 1 - EE 205 - Spr 2022
 ///
 /// @file updateCats.c
 /// @version 1.0
@@ -12,9 +12,11 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "catDatabase.h"
 #include <stdbool.h>
+
+#include "catDatabase.h"
 #include "updateCats.h"
+#include "config.h"
 
 
 int updateCatName( int index, char newName[] ){

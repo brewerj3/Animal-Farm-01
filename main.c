@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///         University of Hawaii, College of Engineering
-/// @brief  Lab 05d - Animal Farm 1 - EE 205 - Spr 2022
+/// @brief  Lab 07d - Animal Farm 1 - EE 205 - Spr 2022
 ///
 /// @file main.c
 /// @version 1.0
@@ -21,6 +21,7 @@
 #include "deleteCats.h"
 #include "reportCats.h"
 #include "updateCats.h"
+#include "config.h"
 
 int main(){
    printf( "Starting Animal Farm 0 \n" );
