@@ -17,7 +17,7 @@ TARGET = animalFarm
 
 all: $(TARGET)
 
-catDatabase.o: catDatabase.h catDatabase.c
+catDatabase.o: catDatabase.h catDatabase.c config.h
 		$(CC) $(CFLAGS) -c catDatabase.c
 
 addCats.o: addCats.c addCats.h 
