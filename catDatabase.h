@@ -30,4 +30,4 @@ extern float weight[MAX_CATS];
 
 extern int currentNumberOfCats;
 
-extern struct Cat cat;
+extern struct Cat;
