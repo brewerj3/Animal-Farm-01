@@ -30,10 +30,4 @@ extern float weight[MAX_CATS];
 
 extern int currentNumberOfCats;
 
-struct Cat {
-    char name[MAX_CATS][MAX_NAME_LENGTH];
-    bool isFixed[MAX_CATS];
-    float weight[MAX_CATS];
-    int gender[MAX_CATS];
-    int breed[MAX_CATS];
-};
+struct Cat cat;
