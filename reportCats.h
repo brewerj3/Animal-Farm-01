@@ -13,5 +13,5 @@ extern int printCat( int index );
 
 extern int printAllCats();
 
-extern int findCats( const char nameToFind[] );
+extern int findCats( char nameToFind[] );
 

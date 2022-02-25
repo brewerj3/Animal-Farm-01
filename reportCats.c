@@ -17,12 +17,12 @@
 #include "config.h"
 
 int printCat( int index ) {
-   if( (name[index] == NULL) || (index < 0) || (index > MAX_CATS)){
+   if( (cat[index].name == NULL) || (index < 0) || (index > MAX_CATS)){
       printf("animalFarm0: Bad cat [%d] \n",index);
       return 0;
    }
    else {
-      printf("cat index = [%u] name = [%s] gender=[%d] breed=[%d] isFixed=[%d] weight=[%4.4f] \n", index, name[index], genderOfCat[index], breedOfCat[index], isFixed[index], weight[index]);
+      printf("cat index = [%u] name = [%s] gender=[%d] breed=[%d] isFixed=[%d] weight=[%4.4f] \n", index, cat[index].name, genderOfCat[index], breedOfCat[index], isFixed[index], weight[index]);
    }
    return 0;
 }
@@ -32,20 +32,21 @@ int printAllCats(void){
    if(currentNumberOfCats == 0){
       fprintf( stderr, "%s: There are no cats in this database \n", PROGRAM_NAME);
    }
-   while((name[index] != NULL) && (index < MAX_CATS)){
-      printf("cat index = [%u] name = [%s] gender=[%d] breed=[%d] isFixed=[%d] weight=[%f] \n", index, name[index], genderOfCat[index], breedOfCat[index], isFixed[index], weight[index]);
+   while((cat[index].name != NULL) && (index < MAX_CATS)){
+      printf("cat index = [%u] name = [%s] gender=[%d] breed=[%d] isFixed=[%d] weight=[%f] \n", index, cat[index].name, genderOfCat[index], breedOfCat[index], isFixed[index], weight[index]);
       index++;
    }
    return 0;
 }
 
-int findCats( const char nameToFind[] ){
+int findCats( char nameToFind[] ){
    int index = 0;
    printf("Looking for %s's Index \n", nameToFind);
-   while(nameToFind[0] != *name[index] && index != MAX_CATS){
+   while(nameToFind[0] != cat[index].name && index != MAX_CATS){
       index++;
    }
    if(index == MAX_CATS){
+       fprintf( stderr, "%s: Reached the max number of cats and did not find cat.", PROGRAM_NAME);
       exit(EXIT_FAILURE);
    }
    else {
