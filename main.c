@@ -32,7 +32,7 @@ int main(){
    addCat( "Kali",   FEMALE,         SHORTHAIR,  false, 9.2 );
    addCat( "Trin",   FEMALE,         MANX,       true,  12.2 );
    addCat( "Chili",  UNKNOWN_GENDER, SHORTHAIR,  false, 19.0 );
-   addCat( "Tybalt", MALE,           SPHYNX,     true,  7.9 );
+   addCat( "Tyibalt", MALE,           SPHYNX,     true,  7.9 );
 
    printAllCats();
 
