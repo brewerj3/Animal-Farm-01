@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///         University of Hawaii, College of Engineering
-/// @brief  Lab 05d - Animal Farm 0 - EE 205 - Spr 2022
+/// @brief  Lab 05d - Animal Farm 1 - EE 205 - Spr 2022
 ///
 /// @file addCats.c
 /// @version 1.0
