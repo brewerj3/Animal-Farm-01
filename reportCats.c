@@ -30,7 +30,7 @@ int printCat( int index ) {
 int printAllCats(void){
    int index = 0;
    if(currentNumberOfCats == 0){
-      printf("There are no cats in this database \n");
+      fprintf( stderr, "%s: There are no cats in this database \n", PROGRAM_NAME);
    }
    while((name[index] != NULL) && (index < MAX_CATS)){
       printf("cat index = [%u] name = [%s] gender=[%d] breed=[%d] isFixed=[%d] weight=[%f] \n", index, name[index], genderOfCat[index], breedOfCat[index], isFixed[index], weight[index]);

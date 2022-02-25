@@ -20,29 +20,29 @@
 int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isFixedNew, float weightNew ){
     int index = 0;
     if(currentNumberOfCats >= MAX_CATS){
-        printf("currentNumberOfCats exceeds MAX_CATS\n");
+        fprintf( stderr, "%s: CurrentNumberOfCats exceeds maximum allowed cats in database.\n", PROGRAM_NAME);
         return 0;
     }
 
     int lengthOfString = strlen(nameToAdd);
 
     if(weightNew <= 0){
-        printf("new weight(which is %f) is less than or equal to 0 \n", weightNew);
+        fprintf( stderr, "%s: New weight(which is %f) is less than or equal to 0 \n",PROGRAM_NAME, weightNew);
         return 0;
     }
     if(lengthOfString <= 0){
-        printf("length of string equals 0\n");
+        fprintf( stderr, "%s: Length of string equals 0\n",PROGRAM_NAME);
         return 0;
     }
     else if(lengthOfString > MAX_NAME_LENGTH){
-        printf("length of string is greater than max name length\n");
+        fprintf( stderr, "%s: Length of string is greater than max name length\n", PROGRAM_NAME);
         return 0;
     }
     else {
         index=0;
         while((nameToAdd != name[index]) && (MAX_CATS != index)) { //looking to see if name already exists
             if(nameToAdd == name[index]) {
-                printf("name already exists\n");//print if name of cat already exists
+                fprintf( stderr, "%s: Name already exists\n", PROGRAM_NAME);//print if name of cat already exists
                 return 0;
             }
             index++;

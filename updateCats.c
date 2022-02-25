@@ -25,11 +25,11 @@ int updateCatName( int index, char newName[] ){
    }
    int indexSearch = 0;
    while((newName != name[indexSearch]) && (indexSearch != MAX_CATS)) {
-      //printf("index search is: %d name is%s \n", indexSearch, name[indexSearch]);
+      //printf("index search is: %d name is%s \n", indexSearch, name[indexSearch]); @TODO remove before final
       indexSearch++;
    }
    if(newName == name[indexSearch]){
-      printf("%s already exists at index location: %d \n", newName, indexSearch);
+      fprintf( stderr, "%s: %s already exists at index location: %d \n", PROGRAM_NAME, newName, indexSearch);
       return 0;
    }
    else {
