@@ -8,13 +8,12 @@
 /// @author Joshua Brewer <brewerj3@hawaii.edu>
 /// @date   25_Feb_2022
 ///////////////////////////////////////////////////////////////////////////////
+#include <stdbool.h>
 
 #include "catDatabase.h"
 #include "config.h"
 
 float weight[MAX_CATS];
-
-
 
 int genderOfCat[MAX_CATS];
 
@@ -26,3 +25,10 @@ char *name[MAX_CATS];
 
 bool isFixed[MAX_CATS] = {false};
 
+struct Cat {
+    char name[MAX_CATS][MAX_NAME_LENGTH];
+    enum Gender gender;
+    enum Breed breed;
+    bool isFixed[MAX_CATS];
+    float weight[MAX_CATS];
+};
