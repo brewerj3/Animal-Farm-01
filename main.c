@@ -48,6 +48,14 @@ int main(){
 
    printAllCats();
 
+   int tybalt = findCats( "Tybalt" );
+   updateCatCollar1( tybalt, BLUE );
+   printCat(tybalt);
+   updateCatCollar2( tybalt, GREEN );
+   printCat( tybalt );
+   updateLicense(tybalt, 123456789);
+   printCat( tybalt );
+
    deleteAllCats();
    printAllCats();
 
