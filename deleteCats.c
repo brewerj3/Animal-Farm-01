@@ -21,7 +21,7 @@ void deleteAllCats(){
    currentNumberOfCats = 0;
    int index = 0;
    while((catsstruct.name[index] != NULL) && (index < MAX_CATS)){
-       memset(&catsstruct.name[index], 0 sizeof(catsstruct.name[index]));
+       memset(&catsstruct.name[index], 0, sizeof(catsstruct.name[index]));
       genderOfCat[index] = 0;
       breedOfCat[index] = 0;
       isFixed[index] = false;
