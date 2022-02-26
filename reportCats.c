@@ -32,7 +32,7 @@ int printAllCats(void){
    if(currentNumberOfCats == 0){
       fprintf( stderr, "%s: There are no cats in this database \n", PROGRAM_NAME);
    }
-   while((catsstruct.name[index] != NULL) && (index < MAX_CATS)){
+   while((catsstruct.name[index] != 0) && (index < MAX_CATS)){
       printf("cat index = [%u] name = [%s] gender=[%d] breed=[%d] isFixed=[%d] weight=[%f] \n", index, catsstruct.name[index], genderOfCat[index], breedOfCat[index], isFixed[index], weight[index]);
       index++;
    }
