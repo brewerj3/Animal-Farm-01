@@ -42,10 +42,11 @@ char* genderOfCat( int gender ){
         case 2 :
             return "Female";
     }
+    return 0;
 }
 
 char* breedOfCat( int breed ){
-    switch(breed){
+    switch(breed) {
         case 0 :
             return "Unknown Breed";
         case 1 :
@@ -59,6 +60,7 @@ char* breedOfCat( int breed ){
         case 5 :
             return "Sphynx";
     }
+    return 0;
 }
 
 int printCat( int index ) {
