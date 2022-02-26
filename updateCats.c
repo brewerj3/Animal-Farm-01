@@ -36,7 +36,7 @@ int updateCatName( int index, char newName[] ){
       fprintf( stderr, "%s: %s already exists at index location: %d \n", PROGRAM_NAME, newName, indexSearch);
       return 0;
    }
-   if(newName == catsStruct[indexSearch].name) {
+   else {
        strcpy(catsStruct[index].name, newName);
       return 0;
    }
