@@ -24,9 +24,9 @@
 #include "config.h"
 
 int main(){
-   printf( "Starting Animal Farm 0 \n" );
+   printf( "Starting %s \n", PROGRAM_NAME );
 
-   emptyNameArray();
+   deleteAllCats();
 
    addCat( "Loki",   MALE,           PERSIAN,    true,  8.5 );
    addCat( "Milo",   MALE,           MANX,       true,  7.0 );
