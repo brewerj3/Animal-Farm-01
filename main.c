@@ -51,5 +51,5 @@ int main(){
    deleteAllCats();
    printAllCats();
 
-   printf( "Done with Animal Farm 0 \n" );
+   printf( "Done with %s \n", PROGRAM_NAME );
 }

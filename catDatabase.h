@@ -14,7 +14,6 @@
 
 #include <stdbool.h>
 
-extern char *name[MAX_CATS];
 
 extern enum gender{UNKNOWN_GENDER, MALE, FEMALE}isGender;
 
@@ -23,8 +22,6 @@ extern int genderOfCat[MAX_CATS];
 extern enum breed{UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX}isBreed;
 
 extern int breedOfCat[MAX_CATS];
-
-extern bool isFixed[MAX_CATS];
 
 extern float weight[MAX_CATS];
 
