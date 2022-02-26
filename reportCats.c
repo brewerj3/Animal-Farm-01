@@ -31,6 +31,7 @@ char* colorCollar( int color ){
         case 5 :
             return "Pink";
     }
+    return 0;
 }
 
 char* genderOfCat( int gender ){
