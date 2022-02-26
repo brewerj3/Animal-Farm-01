@@ -37,3 +37,5 @@ struct Cat {
     int gender[MAX_CATS];
     int breed[MAX_CATS];
 };
+
+extern struct Cat catsstruct;

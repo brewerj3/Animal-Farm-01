@@ -25,4 +25,4 @@ char *name[MAX_CATS];
 
 bool isFixed[MAX_CATS] = {false};
 
-extern struct Cat catsstruct;
+struct Cat catsstruct;
