@@ -16,12 +16,12 @@
 #include "config.h"
 
 int printCat( int index ) {
-   if( (catsStruct.name[index][0] == '\0') || (index < 0) || (index > MAX_CATS)){
+   if( ( !strcmp(catsStruct[index].name, NULL  ) || (index < 0) || (index > MAX_CATS)){
       printf("animalFarm0: Bad cat [%d] \n",index);
       return 0;
    }
    else {
-      printf("cat index = [%u] name = [%s] gender=[%d] breed=[%d] isFixed=[%d] weight=[%4.4f] \n", index, catsStruct.name[index], catsStruct.gender[index], catsStruct.breed[index], catsStruct.isFixed[index], catsStruct.weight[index]);
+      printf("cat index = [%u] name = [%s] gender=[%d] breed=[%d] isFixed=[%d] weight=[%4.4f] \n", index, catsStruct[index].name, catsStruct[index].gender, catsStruct[index].breed, catsStruct[index].isFixed, catsStruct[index].weight);
    }
    return 0;
 }
@@ -31,8 +31,8 @@ int printAllCats(void){
    if(currentNumberOfCats == 0){
       fprintf( stderr, "%s: There are no cats in this database \n", PROGRAM_NAME);
    }
-   while((catsStruct.name[index][0] != '\0') && (index < MAX_CATS)){
-      printf("cat index = [%u] name = [%s] gender=[%d] breed=[%d] isFixed=[%d] weight=[%f] \n", index, catsStruct.name[index], catsStruct.gender[index], catsStruct.breed[index], catsStruct.isFixed[index], catsStruct.weight[index]);
+   while( ( !strcmp(catsStruct[index].name, NULL  ) ) && (index < MAX_CATS)){
+      printf("cat index = [%u] name = [%s] gender=[%d] breed=[%d] isFixed=[%d] weight=[%f] \n", index, catsStruct[index].name, catsStruct[index].gender, catsStruct[index].breed, catsStruct[index].isFixed, catsStruct[index].weight);
       index++;
    }
    return 0;
@@ -43,7 +43,7 @@ int findCats( char nameToFind[] ){
    printf("Looking for %s's Index \n", nameToFind);
    while(index != MAX_CATS){
        //printf("is %s the same name as %s? \n", nameToFind, catsStruct.name[index]); //@TODO remove later
-       if((!strcmp(nameToFind, catsStruct.name[index]))){
+       if((!strcmp(nameToFind, catsStruct[index].name))){
            return index;
        }
       index++;

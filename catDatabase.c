@@ -21,4 +21,4 @@ int breedOfCat[MAX_CATS];
 
 int currentNumberOfCats=0;
 
-struct Cat catsStruct;
+struct Cat catsStruct[MAX_CATS];

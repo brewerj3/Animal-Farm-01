@@ -24,22 +24,22 @@ int updateCatName( int index, char newName[] ){
       exit(EXIT_FAILURE);
    }
    int indexSearch = 0;
-   while((newName != catsStruct.name[indexSearch]) && (indexSearch != MAX_CATS)) {
+   while((newName != catsStruct[indexSearch].name) && (indexSearch != MAX_CATS)) {
       //printf("index search is: %d name is%s \n", indexSearch, name[indexSearch]); @TODO remove before final
       indexSearch++;
    }
-   if(newName == catsStruct.name[indexSearch]){
+   if(newName == catsStruct[indexSearch].name){
       fprintf( stderr, "%s: %s already exists at index location: %d \n", PROGRAM_NAME, newName, indexSearch);
       return 0;
    }
    else {
-       strcpy(catsStruct.name[index], newName);
+       strcpy(catsStruct[index].name, newName);
       return 0;
    }
 }
 
 int fixCat( int index ){
-    catsStruct.isFixed[index] = true;
+    catsStruct[index].isFixed = true;
     return 0;
 }
 
@@ -48,7 +48,7 @@ int updateCatWeight( int index, float newWeight ){
       exit(EXIT_FAILURE);
    }
    else {
-      catsStruct.weight[index] = newWeight;
+      catsStruct[index].weight = newWeight;
       return 0;
    }
 }

@@ -41,22 +41,22 @@ int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isF
     else {
         int index = 0;
         while(MAX_CATS != index) { //looking to see if name already exists
-            if(nameToAdd == catsStruct.name[index]) {
+            if(nameToAdd == catsStruct[index].name) {
                 fprintf( stderr, "%s: Name already exists\n", PROGRAM_NAME);//print if name of cat already exists
                 return 0;
             }
             index++;
         }
         index = 0; //reset index to look for empty location.
-        while((catsStruct.name[index][0] != '\0') && (MAX_CATS > index)){ //searching for first empty spot
+        while((catsStruct[index].name != '\0') && (MAX_CATS > index)){ //searching for first empty spot
             index++;
         }
-        printf("attempting to add new name %s to index: %i\n", catsStruct.name[index], index ); //@TODO remove before final
-        strcpy(catsStruct.name[index], nameToAdd);
-        catsStruct.isFixed[index] = isFixedNew;
-        catsStruct.gender[index] = isGender;
-        catsStruct.breed[index] = isBreed;
-        catsStruct.weight[index] = weightNew;
+        printf("attempting to add new name %s to index: %i\n", catsStruct[index].name, index ); //@TODO remove before final
+        strcpy(catsStruct[index].name, nameToAdd);
+        catsStruct[index].isFixed = isFixedNew;
+        catsStruct[index].gender = isGender;
+        catsStruct[index].breed = isBreed;
+        catsStruct[index].weight = weightNew;
         currentNumberOfCats++;
         return index;
     }
