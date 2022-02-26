@@ -20,15 +20,19 @@
 
 
 int updateCatName( int index, char newName[] ){
-   if(strlen(newName) == 0){
+   if(strlen(newName) == 0){ //Check if new name is empty
       exit(EXIT_FAILURE);
    }
    int indexSearch = 0;
-   while((newName != catsStruct[indexSearch].name) && (indexSearch != MAX_CATS)) {
+   while((newName != catsStruct[indexSearch].name) && (indexSearch != MAX_CATS)) { // Search for existing cat with same name as new name
       //printf("index search is: %d name is%s \n", indexSearch, name[indexSearch]); @TODO remove before final
+       if(newName == catsStruct[indexSearch].name){
+           fprintf( stderr, "%s: %s already exists at index location: %d \n", PROGRAM_NAME, newName, indexSearch);
+           return 0;
+       }
       indexSearch++;
    }
-   if(newName == catsStruct[indexSearch].name){
+   if(newName == catsStruct[indexSearch].name){ //@TODO remove before final
       fprintf( stderr, "%s: %s already exists at index location: %d \n", PROGRAM_NAME, newName, indexSearch);
       return 0;
    }
