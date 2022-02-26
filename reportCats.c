@@ -11,7 +11,6 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-
 #include "catDatabase.h"
 #include "reportCats.h"
 #include "config.h"
