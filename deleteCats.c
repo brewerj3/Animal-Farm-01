@@ -19,8 +19,8 @@ void deleteAllCats(){
    printf("Deleting all cats. \n");
    currentNumberOfCats = 0;
    int index = 0;
-   while((cat[index].name != NULL) && (index < MAX_CATS)){
-      cats[index].name = NULL;
+   while((catsstruct.name[index] != NULL) && (index < MAX_CATS)){
+      catsstruct.name[index] = NULL;
       genderOfCat[index] = 0;
       breedOfCat[index] = 0;
       isFixed[index] = false;
