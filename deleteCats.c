@@ -23,9 +23,9 @@ void deleteAllCats(){
    while((catsStruct.name[index] != NULL) && (index < MAX_CATS)){
        catsStruct.name[index][0] = '\0';
        catsStruct.isFixed[index] = false;
-       genderOfCat[index] = 0;
-       breedOfCat[index] = 0;
-       weight[index] = 0;
+       catsStruct.gender[index] = 0;
+       catsStruct.breed[index] = 0;
+       catsStruct.weight[index] = 0;
        index++;
    }
 }

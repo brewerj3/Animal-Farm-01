@@ -48,7 +48,7 @@ int updateCatWeight( int index, float newWeight ){
       exit(EXIT_FAILURE);
    }
    else {
-      weight[index] = newWeight;
+      catsStruct.weight[index] = newWeight;
       return 0;
    }
 }

@@ -54,9 +54,9 @@ int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isF
         printf("attempting to add new name %s to index: %i\n", catsStruct.name[index], index ); //@TODO remove before final
         strcpy(catsStruct.name[index], nameToAdd);
         catsStruct.isFixed[index] = isFixedNew;
-        genderOfCat[index] = isGender;
-        breedOfCat[index] = isBreed;
-        weight[index] = weightNew;
+        catsStruct.gender[index] = isGender;
+        catsStruct.breed[index] = isBreed;
+        catsStruct.weight[index] = weightNew;
         currentNumberOfCats++;
         return index;
     }
