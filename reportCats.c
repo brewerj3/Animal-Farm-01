@@ -92,7 +92,6 @@ int findCats( char nameToFind[] ){
    int index = 0;
    printf("Looking for %s's Index \n", nameToFind);
    while(index != MAX_CATS){
-       //printf("is %s the same name as %s? \n", nameToFind, catsStruct.name[index]); //@TODO remove later
        if((!strcmp(nameToFind, catsStruct[index].name))){
            return index;
        }
