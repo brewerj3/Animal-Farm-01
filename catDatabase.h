@@ -38,4 +38,4 @@ struct Cat {
     int breed[MAX_CATS];
 };
 
-extern struct Cat catsstruct;
+extern struct Cat catsStruct;

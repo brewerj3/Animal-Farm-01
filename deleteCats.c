@@ -20,13 +20,13 @@ void deleteAllCats(){
    printf("Deleting all cats. \n");
    currentNumberOfCats = 0;
    int index = 0;
-   while((catsstruct.name[index] != NULL) && (index < MAX_CATS)){
-       memset(&catsstruct.name[index], 0, sizeof(catsstruct.name[index]));
-      genderOfCat[index] = 0;
-      breedOfCat[index] = 0;
-      isFixed[index] = false;
-      weight[index] = 0;
-      index++;
+   while((catsStruct.name[index] != NULL) && (index < MAX_CATS)){
+       memset(&catsStruct.name[index], 0, sizeof(catsStruct.name[index]));
+       genderOfCat[index] = 0;
+       breedOfCat[index] = 0;
+       isFixed[index] = false;
+       weight[index] = 0;
+       index++;
    }
 }
 
