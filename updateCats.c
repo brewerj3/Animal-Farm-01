@@ -25,21 +25,14 @@ int updateCatName( int index, char newName[] ){
    }
    int indexSearch = 0;
    while( indexSearch != MAX_CATS ) { // Search for existing cat with same name as new name
-       //printf("index search is: %d name is %s \n", indexSearch, catsStruct[indexSearch].name); // @TODO remove before final
-       if((!strcmp(newName, catsStruct[indexSearch].name))){
-           fprintf( stderr, "%s: %s cannot also be named %s: as %s is already named that at index %d \n", PROGRAM_NAME, catsStruct[index].name, newName, catsStruct[indexSearch].name, indexSearch);
+       if((!strcmp(newName, catsStruct[indexSearch].name))){ //Check if a cat is already named newName
+           fprintf( stderr, "%s: %s cannot be named %s: as %s is already named that at index %d \n", PROGRAM_NAME, catsStruct[index].name, newName, catsStruct[indexSearch].name, indexSearch);
            return 0;
        }
       indexSearch++;
    }
-   if(newName == catsStruct[indexSearch].name){ //@TODO remove before final
-      fprintf( stderr, "%s: %s already exists at index location: %d \n", PROGRAM_NAME, newName, indexSearch);
-      return 0;
-   }
-   else {
-       strcpy(catsStruct[index].name, newName);
-      return 0;
-   }
+   strcpy(catsStruct[index].name, newName);
+   return 0;
 }
 
 int fixCat( int index ){
