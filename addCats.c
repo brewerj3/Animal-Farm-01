@@ -51,8 +51,8 @@ int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isF
         while((catsstruct.name[index] != NULL) && (MAX_CATS > index)){ //searching for first empty spot
             index++;
         }
-        //strcpy(catsstruct.name[index], nameToAdd);
-        catsstruct.name[index] = nameToAdd;
+        strcpy(catsstruct.name[index], nameToAdd);
+        //catsstruct.name[index] = nameToAdd;
         genderOfCat[index] = isGender;
         breedOfCat[index] = isBreed;
         isFixed[index] = isFixedNew;
