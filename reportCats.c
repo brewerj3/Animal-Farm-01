@@ -17,7 +17,7 @@
 
 int printCat( int index ) {
    if( ( catsStruct[index].name[0] == '\0'  ) || (index < 0) || (index > MAX_CATS) ){
-      printf("animalFarm0: Bad cat [%d] \n",index);
+      fprintf(stderr, "%s: Bad cat [%d] \n", PROGRAM_NAME, index);
       return 0;
    }
    else {
