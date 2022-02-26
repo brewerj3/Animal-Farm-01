@@ -22,7 +22,7 @@ int printCat( int index ) {
       return 0;
    }
    else {
-      printf("cat index = [%u] name = [%s] gender=[%d] breed=[%d] isFixed=[%d] weight=[%4.4f] \n", index, catsStruct.name[index], genderOfCat[index], breedOfCat[index], isFixed[index], weight[index]);
+      printf("cat index = [%u] name = [%s] gender=[%d] breed=[%d] isFixed=[%d] weight=[%4.4f] \n", index, catsStruct.name[index], genderOfCat[index], breedOfCat[index], catsStruct.isFixed[index], weight[index]);
    }
    return 0;
 }
@@ -33,7 +33,7 @@ int printAllCats(void){
       fprintf( stderr, "%s: There are no cats in this database \n", PROGRAM_NAME);
    }
    while((catsStruct.name[index][0] != '\0') && (index < MAX_CATS)){
-      printf("cat index = [%u] name = [%s] gender=[%d] breed=[%d] isFixed=[%d] weight=[%f] \n", index, catsStruct.name[index], genderOfCat[index], breedOfCat[index], isFixed[index], weight[index]);
+      printf("cat index = [%u] name = [%s] gender=[%d] breed=[%d] isFixed=[%d] weight=[%f] \n", index, catsStruct.name[index], genderOfCat[index], breedOfCat[index], catsStruct.isFixed[index], weight[index]);
       index++;
    }
    return 0;

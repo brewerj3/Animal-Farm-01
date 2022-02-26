@@ -39,7 +39,7 @@ int updateCatName( int index, char newName[] ){
 }
 
 int fixCat( int index ){
-   isFixed[index] = true;
+    catsStruct.isFixed[index] = true;
    return 0;
 }
 
