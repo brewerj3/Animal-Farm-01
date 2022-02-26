@@ -15,4 +15,8 @@ extern int fixCat( int index );
 
 extern int updateCatWeight( int index, float newWeight );
 
+void updateCatCollar1( int index, enum color collarColor1 )
 
+void updateCatCollar2( int index, enum color collarColor2 )
+
+void updateLicense( int index, unsigned long long license )

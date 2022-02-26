@@ -32,6 +32,9 @@ struct Cat {
     float weight;
     int gender;
     int breed;
+    int color1;
+    int color2;
+    unsigned long long license;
 
 };
 

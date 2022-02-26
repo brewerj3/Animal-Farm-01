@@ -50,3 +50,14 @@ int updateCatWeight( int index, float newWeight ){
    }
 }
 
+void updateCatCollar1( int index, enum color collarColor1 ){
+    catsStruct[index].color1 = collarColor1;
+}
+
+void updateCatCollar2( int index, enum color collarColor2 ){
+    catsStruct[index].color2 = collarColor2;
+}
+
+void updateLicense( int index, unsigned long long license ){
+    catsStruct[index].license = license;
+}

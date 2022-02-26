@@ -17,7 +17,7 @@
 #include "addCats.h"
 #include "config.h"
 
-int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isFixedNew, float weightNew ){
+int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isFixedNew, float weightNew, enum color collarColor1, enum color collarColor2, unsigned long long license ){
 
     if(currentNumberOfCats >= MAX_CATS){
         fprintf( stderr, "%s: CurrentNumberOfCats exceeds maximum allowed cats in database.\n", PROGRAM_NAME);
@@ -57,6 +57,9 @@ int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isF
         catsStruct[index].gender = isGender;
         catsStruct[index].breed = isBreed;
         catsStruct[index].weight = weightNew;
+        catsStruct[index].color1 = collarColor1;
+        catsStruct[index].color2 = collarColor2;
+        catsStruct[index].license = license;
         currentNumberOfCats++;
         return index;
     }
