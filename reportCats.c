@@ -15,13 +15,60 @@
 #include "reportCats.h"
 #include "config.h"
 
+char* colorCollar( int color ){
+
+    switch(color){
+        case 0 :
+            return "Black";
+        case 1 :
+            return "White";
+        case 2 :
+            return "Red";
+        case 3 :
+            return "Blue";
+        case 4 :
+            return "Green";
+        case 5 :
+            return "Pink";
+    }
+}
+
+char* genderOfCat( int gender ){
+    switch(gender){
+        case 0 :
+            return "Unknown gender";
+        case 1 :
+            return "Male";
+        case 2 :
+            return "Female";
+    }
+}
+
+char* breedOfCat( int breed ){
+    switch(breed){
+        case 0 :
+            return "Unknown Breed";
+        case 1 :
+            return "Maine Coon";
+        case 2 :
+            return "Manx";
+        case 3 :
+            return "Shorthair";
+        case 4 :
+            return "Persian";
+        case 5 :
+            return "Sphynx";
+    }
+}
+
 int printCat( int index ) {
    if( ( catsStruct[index].name[0] == '\0'  ) || (index < 0) || (index > MAX_CATS) ){
       fprintf(stderr, "%s: Bad cat [%d] \n", PROGRAM_NAME, index);
       return 0;
    }
    else {
-      printf("cat index = [%u] name = [%s] gender=[%d] breed=[%d] isFixed=[%d] weight=[%4.4f] collarColor1=[%d] collarColor2=[%d] license=[%llu] \n", index, catsStruct[index].name, catsStruct[index].gender, catsStruct[index].breed, catsStruct[index].isFixed, catsStruct[index].weight, catsStruct[index].color1, catsStruct[index].color2, catsStruct[index].license);
+
+      printf("cat index = [%u] name = [%s] gender=[%s] breed=[%s] isFixed=[%d] weight=[%4.4f] collarColor1=[%s] collarColor2=[%s] license=[%llu] \n", index, catsStruct[index].name, genderOfCat(catsStruct[index].gender), breedOfCat(catsStruct[index].breed), catsStruct[index].isFixed, catsStruct[index].weight, colorCollar(catsStruct[index].color1), colorCollar(catsStruct[index].color2), catsStruct[index].license);
    }
    return 0;
 }
@@ -32,7 +79,7 @@ int printAllCats(void){
       fprintf( stderr, "%s: There are no cats in this database \n", PROGRAM_NAME);
    }
    while( ( catsStruct[index].name[0] != '\0'  )  && (index < MAX_CATS) ){
-       printf("cat index = [%u] name = [%s] gender=[%d] breed=[%d] isFixed=[%d] weight=[%4.4f] collarColor1=[%d] collarColor2=[%d] license=[%llu] \n", index, catsStruct[index].name, catsStruct[index].gender, catsStruct[index].breed, catsStruct[index].isFixed, catsStruct[index].weight, catsStruct[index].color1, catsStruct[index].color2, catsStruct[index].license);
+       printf("cat index = [%u] name = [%s] gender=[%s] breed=[%s] isFixed=[%d] weight=[%4.4f] collarColor1=[%s] collarColor2=[%s] license=[%llu] \n", index, catsStruct[index].name, genderOfCat(catsStruct[index].gender), breedOfCat(catsStruct[index].breed), catsStruct[index].isFixed, catsStruct[index].weight, colorCollar(catsStruct[index].color1), colorCollar(catsStruct[index].color2), catsStruct[index].license);
       index++;
    }
    return 0;

@@ -9,6 +9,10 @@
 /// @date   25_Feb_2022
 ///////////////////////////////////////////////////////////////////////////////
 
+extern char* colorCollar( int color );
+
+char* genderOfCat( int gender );
+
 extern int printCat( int index );
 
 extern int printAllCats();
