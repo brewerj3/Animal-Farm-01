@@ -16,7 +16,7 @@
 #include "config.h"
 
 int printCat( int index ) {
-   if( ( catsStruct[index].name[0] != '\0'  ) || (index < 0) || (index > MAX_CATS) ){
+   if( ( catsStruct[index].name[0] == '\0'  ) || (index < 0) || (index > MAX_CATS) ){
       printf("animalFarm0: Bad cat [%d] \n",index);
       return 0;
    }
