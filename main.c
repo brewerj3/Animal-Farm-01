@@ -26,7 +26,7 @@
 int main(){
    printf( "Starting %s \n", PROGRAM_NAME );
 
-   deleteAllCats();
+
 
    addCat( "Loki",   MALE,           PERSIAN,    true,  8.5 );
    addCat( "Milo",   MALE,           MANX,       true,  7.0 );
