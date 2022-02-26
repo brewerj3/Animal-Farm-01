@@ -40,10 +40,6 @@ int printAllCats(void){
 }
 
 int findCats( char nameToFind[] ){
-    if(sizeof(nameToFind) > MAX_CATS) {
-        fprintf(stderr, "%s: Name to find is too long.\n", PROGRAM_NAME);
-        return 0;
-    }
    int index = 0;
    printf("Looking for %s's Index \n", nameToFind);
    while((nameToFind != catsstruct.name[index]) && (index != MAX_CATS)){
