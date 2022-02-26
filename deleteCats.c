@@ -32,9 +32,8 @@ void deleteAllCats(){
 
 void emptyNameArray(){
     for(int index = 0; index <= MAX_CATS; index++){
-        catsstruct.name[index] = NULL;
+        memset(&catsstruct.name[index], NULL, sizeof(catsstruct.name[index]));
     }
-    return 0;
 }
 
 
