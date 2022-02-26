@@ -30,5 +30,11 @@ void deleteAllCats(){
    }
 }
 
+void emptyNameArray(){
+    for(int index = 0; index <= MAX_CATS; index++){
+        catsstruct.name[index] = NULL;
+    }
+    return 0;
+}
 
 

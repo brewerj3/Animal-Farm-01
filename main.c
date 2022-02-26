@@ -25,7 +25,9 @@
 
 int main(){
    printf( "Starting Animal Farm 0 \n" );
-   
+
+   emptyNameArray();
+
    addCat( "Loki",   MALE,           PERSIAN,    true,  8.5 );
    addCat( "Milo",   MALE,           MANX,       true,  7.0 );
    addCat( "Bella",  FEMALE,         MAINE_COON, true,  18.2 );

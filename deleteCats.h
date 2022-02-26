@@ -12,3 +12,5 @@
 
 extern void deleteAllCats(void);
 
+extern void emptyNameArray(void);
+
