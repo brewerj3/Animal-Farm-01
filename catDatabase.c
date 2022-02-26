@@ -8,16 +8,9 @@
 /// @author Joshua Brewer <brewerj3@hawaii.edu>
 /// @date   25_Feb_2022
 ///////////////////////////////////////////////////////////////////////////////
-#include <stdbool.h>
 
 #include "catDatabase.h"
 #include "config.h"
-
-float weight[MAX_CATS];
-
-int genderOfCat[MAX_CATS];
-
-int breedOfCat[MAX_CATS];
 
 int currentNumberOfCats=0;
 
