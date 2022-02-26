@@ -26,16 +26,16 @@ int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isF
 
     int lengthOfString = strlen(nameToAdd);
 
-    if(weightNew <= 0){
-        fprintf( stderr, "%s: New weight(which is %f) is less than or equal to 0 \n",PROGRAM_NAME, weightNew);
-        return 0;
-    }
     if(lengthOfString <= 0){
         fprintf( stderr, "%s: Length of string equals 0\n",PROGRAM_NAME);
         return 0;
     }
     else if(lengthOfString > MAX_NAME_LENGTH){
         fprintf( stderr, "%s: Length of string is greater than max name length\n", PROGRAM_NAME);
+        return 0;
+    }
+    else if(weightNew <= 0){
+        fprintf( stderr, "%s: New weight(which is %f) is less than or equal to 0 \n",PROGRAM_NAME, weightNew);
         return 0;
     }
     else {
@@ -51,7 +51,8 @@ int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isF
         while((catsstruct.name[index] != NULL) && (MAX_CATS > index)){ //searching for first empty spot
             index++;
         }
-        strcpy(catsstruct.name[index], nameToAdd);
+        //strcpy(catsstruct.name[index], nameToAdd);
+        catsstruct.name[index] = nameToAdd;
         genderOfCat[index] = isGender;
         breedOfCat[index] = isBreed;
         isFixed[index] = isFixedNew;
