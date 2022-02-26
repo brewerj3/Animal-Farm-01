@@ -16,7 +16,7 @@
 #include "config.h"
 
 int printCat( int index ) {
-   if( ( !strcmp(catsStruct[index].name, NULL  ) || (index < 0) || (index > MAX_CATS)){
+   if( ( catsStruct[index].name[0] != '\0'  ) || (index < 0) || (index > MAX_CATS) ){
       printf("animalFarm0: Bad cat [%d] \n",index);
       return 0;
    }
@@ -31,7 +31,7 @@ int printAllCats(void){
    if(currentNumberOfCats == 0){
       fprintf( stderr, "%s: There are no cats in this database \n", PROGRAM_NAME);
    }
-   while( ( !strcmp(catsStruct[index].name, NULL  ) ) && (index < MAX_CATS)){
+   while( ( catsStruct[index].name[0] != '\0'  )  && (index < MAX_CATS) ){
       printf("cat index = [%u] name = [%s] gender=[%d] breed=[%d] isFixed=[%d] weight=[%f] \n", index, catsStruct[index].name, catsStruct[index].gender, catsStruct[index].breed, catsStruct[index].isFixed, catsStruct[index].weight);
       index++;
    }
