@@ -40,7 +40,7 @@ int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isF
     }
     else {
         index=0;
-        while((nameToAdd != catsstruct[index].name) && (MAX_CATS != index)) { //looking to see if name already exists
+        while((nameToAdd != catsstruct.name[index]) && (MAX_CATS != index)) { //looking to see if name already exists
             if(nameToAdd == name[index]) {
                 fprintf( stderr, "%s: Name already exists\n", PROGRAM_NAME);//print if name of cat already exists
                 return 0;
@@ -51,7 +51,7 @@ int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isF
         while((name[index] != NULL) && (MAX_CATS > index)){ //searching for first empty spot
             index++;
         }
-        strcpy(catsstruct[index].name, nameToAdd);
+        strcpy(catsstruct.name[index], nameToAdd);
         genderOfCat[index] = isGender;
         breedOfCat[index] = isBreed;
         isFixed[index] = isFixedNew;
