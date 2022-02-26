@@ -39,7 +39,7 @@ int printAllCats(void){
    return 0;
 }
 
-int findCats( char nameToFind[MAX_NAME_LENGTH] ){
+int findCats( char nameToFind[] ){
    int index = 0;
    printf("Looking for %s's Index \n", nameToFind);
    while((!strcmp(nameToFind, catsStruct.name[index])) && (index != MAX_CATS)){

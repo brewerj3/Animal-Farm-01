@@ -13,5 +13,5 @@ extern int printCat( int index );
 
 extern int printAllCats();
 
-extern int findCats( char nameToFind[MAX_NAME_LENGTH] );
+extern int findCats( char nameToFind[] );
 
