@@ -39,7 +39,7 @@ int main(){
    printAllCats();
 
    int kali = findCats( "Kali" );
-   updateCatName( kali, "Chili" ); //should fail
+   updateCatName( kali, "Chili" ); //should fail @TODO does not fail currently need to fix
    printCat( kali );
    updateCatName( kali, "Capulet" );
    updateCatWeight( kali, 9.9 );

@@ -40,7 +40,7 @@ int updateCatName( int index, char newName[] ){
 
 int fixCat( int index ){
     catsStruct.isFixed[index] = true;
-   return 0;
+    return 0;
 }
 
 int updateCatWeight( int index, float newWeight ){

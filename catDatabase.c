@@ -21,6 +21,4 @@ int breedOfCat[MAX_CATS];
 
 int currentNumberOfCats=0;
 
-bool isFixed[MAX_CATS] = {false};
-
 struct Cat catsStruct;
