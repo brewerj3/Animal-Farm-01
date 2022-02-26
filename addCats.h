@@ -9,4 +9,4 @@
 /// @date   25_Feb_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-extern int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isFixedNew, float weightNew ) ;
+extern int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isFixedNew, float weightNew, enum color collarColor1, enum color collarColor2, unsigned long long license ) ;
