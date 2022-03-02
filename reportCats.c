@@ -68,13 +68,13 @@ char* breedOfCat( const int breed ){
 void printCat( const int index ) {
    if( ( catsStruct[index].name[0] == '\0'  ) || (index < 0) || (index > MAX_CATS) ){
       fprintf(stderr, "%s: Bad cat [%d] \n", PROGRAM_NAME, index);
-      return 0;
+      return;
    }
    else {
 
       printf("cat index = [%u] name = [%s] gender=[%s] breed=[%s] isFixed=[%d] weight=[%4.4f] collarColor1=[%s] collarColor2=[%s] license=[%llu] \n", index, catsStruct[index].name, genderOfCat(catsStruct[index].gender), breedOfCat(catsStruct[index].breed), catsStruct[index].isFixed, catsStruct[index].weight, colorCollar(catsStruct[index].color1), colorCollar(catsStruct[index].color2), catsStruct[index].license);
    }
-   return 0;
+   return;
 }
 
 void printAllCats(void){
