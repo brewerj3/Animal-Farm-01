@@ -9,6 +9,8 @@
 /// @date   25_Feb_2022
 ///////////////////////////////////////////////////////////////////////////////
 
+#pragma once
+
 extern int catNameExists( int index, char nameToCheckAgainst[] ) ;
 
 extern int checkForEmptyName( int index ) ;

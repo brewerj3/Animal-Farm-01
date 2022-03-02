@@ -9,6 +9,8 @@
 /// @date   25_Feb_2022
 ///////////////////////////////////////////////////////////////////////////////
 
+#pragma once
+
 extern char* colorCollar( int color );
 
 char* genderOfCat( int gender );

@@ -9,6 +9,8 @@
 /// @date   25_Feb_2022
 ///////////////////////////////////////////////////////////////////////////////
 
+#pragma once
+
 extern int updateCatName( int index, char newName[] );
 
 extern int fixCat( int index );
