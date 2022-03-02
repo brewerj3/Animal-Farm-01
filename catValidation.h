@@ -15,4 +15,6 @@ extern int catNameExists( int index, char nameToCheckAgainst[] ) ;
 
 extern int checkForEmptyName( int index ) ;
 
-bool isValidIndex( int index ) ;
+extern bool isValidIndex( const int index ) ;
+
+extern bool isValidWeight( const float checkWeight ) ;

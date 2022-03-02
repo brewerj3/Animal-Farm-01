@@ -11,6 +11,7 @@
 
 #include <string.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 #include "catDatabase.h"
 #include "config.h"
@@ -33,13 +34,24 @@ int checkForEmptyName( int index ) {
     }
 }
 
-bool isValidIndex( int index ) {
+bool isValidIndex( const int index ) {
     if(index < 0){
         return false;
     }
     if(index > MAX_CATS){
         return false;
     }
-    else
+    else{
         return true;
+    }
+}
+
+bool isValidWeight( const float checkWeight ) {
+    if(checkWeight <= 0){
+        fprintf( stderr, "%s cats cat have negative mass, that would break physics. \n", PROGRAM_NAME );
+        return false;
+    }
+    else {
+        return true;
+    }
 }
