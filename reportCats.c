@@ -14,6 +14,7 @@
 #include "catDatabase.h"
 #include "reportCats.h"
 #include "config.h"
+#include "catValidation.h"
 
 char* colorCollar( int color ){
 
@@ -81,7 +82,7 @@ int printAllCats(void){
    if(currentNumberOfCats == 0){
       fprintf( stderr, "%s: There are no cats in this database \n", PROGRAM_NAME);
    }
-   while( ( catsStruct[index].name[0] != '\0'  )  && (index < MAX_CATS) ){
+   while( ( checkForEmptyName( index )  )  && (index < MAX_CATS) ){
        printf("cat index = [%u] name = [%s] gender=[%s] breed=[%s] isFixed=[%d] weight=[%4.4f] collarColor1=[%s] collarColor2=[%s] license=[%llu] \n", index, catsStruct[index].name, genderOfCat(catsStruct[index].gender), breedOfCat(catsStruct[index].breed), catsStruct[index].isFixed, catsStruct[index].weight, colorCollar(catsStruct[index].color1), colorCollar(catsStruct[index].color2), catsStruct[index].license);
       index++;
    }
@@ -92,7 +93,7 @@ int findCats( char nameToFind[] ){
    int index = 0;
    printf("Looking for %s's Index \n", nameToFind);
    while(index != MAX_CATS){
-       if((!strcmp(nameToFind, catsStruct[index].name))){
+       if(catNameExists(index, nameToFind)){
            return index;
        }
       index++;
