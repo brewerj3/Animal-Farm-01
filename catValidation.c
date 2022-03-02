@@ -13,7 +13,7 @@
 #include <stdbool.h>
 #include <string.h>
 
-#inlcude "catDatabase.h"
+#include "catDatabase.h"
 #include "config.h"
 
 int catNameExists( int index, char nameToCheckAgainst[] ) {
