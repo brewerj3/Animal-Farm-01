@@ -29,7 +29,7 @@ void updateCatName( const int index, char newName[] ) {
    }
    int indexSearch = 0;
    while( indexSearch != MAX_CATS ) { // Search for existing cat with same name as new name
-       if(!catNameExists(indexSearch, newName)) {
+       if(catNameExists(indexSearch, newName)) {
            fprintf(stderr, "%s: cannot rename %s to %s as the cat at index: %d is already named %s \n", PROGRAM_NAME, catsStruct[index].name, newName, indexSearch, catsStruct[indexSearch].name);
            return;
        }
