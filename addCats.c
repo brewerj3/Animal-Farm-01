@@ -16,6 +16,7 @@
 #include "catDatabase.h"
 #include "addCats.h"
 #include "config.h"
+#include "catValidation.h"
 
 int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isFixedNew, float weightNew, enum color collarColor1, enum color collarColor2, unsigned long long license ){
 
@@ -30,25 +31,25 @@ int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isF
         fprintf( stderr, "%s: Length of string equals 0\n",PROGRAM_NAME);
         return 0;
     }
-    else if(lengthOfString > MAX_NAME_LENGTH){
+    if(lengthOfString > MAX_NAME_LENGTH){
         fprintf( stderr, "%s: Length of string is greater than max name length\n", PROGRAM_NAME);
         return 0;
     }
-    else if(weightNew <= 0){
+    if(weightNew <= 0){
         fprintf( stderr, "%s: New weight(which is %f) is less than or equal to 0 \n",PROGRAM_NAME, weightNew);
         return 0;
     }
     else {
         int index = 0;
         while(MAX_CATS != index) { //looking to see if name already exists
-            if(nameToAdd == catsStruct[index].name) {
+            if(catNameEquality(index, nameToAdd)) {
                 fprintf( stderr, "%s: Name already exists\n", PROGRAM_NAME);//print if name of cat already exists
                 return 0;
             }
             index++;
         }
         index = 0; //reset index to look for empty location.
-        while(( catsStruct[index].name[0] != '\0' ) && (MAX_CATS > index)){ //searching for first empty spot
+        while(( checkForEmptyName( index ) ) && (MAX_CATS > index)){ //searching for first empty spot
             index++;
         }
         strcpy(catsStruct[index].name, nameToAdd);

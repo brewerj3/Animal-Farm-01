@@ -38,8 +38,8 @@ updateCats.o: updateCats.c reportCats.h
 main.o: main.c  
 		$(CC) $(CFLAGS) -c main.c
 
-animalFarm: main.o addCats.o deleteCats.o reportCats.o updateCats.o catDatabase.o
-		$(CC) $(CFLAGS) -o $(TARGET) main.o addCats.o deleteCats.o reportCats.o updateCats.o catDatabase.o
+animalFarm: main.o addCats.o deleteCats.o reportCats.o updateCats.o catDatabase.o catValidation.o
+		$(CC) $(CFLAGS) -o $(TARGET) main.o addCats.o deleteCats.o reportCats.o updateCats.o catDatabase.o catValidation.o
 
 clean:
 		rm -f $(TARGET) *.o

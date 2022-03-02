@@ -10,12 +10,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <stdbool.h>
+#include <string.h>
 
 #inlcude "catDatabase.h"
 #include "config.h"
 
-int catNameEquality(int index, char nameToCheckAgainst[] ) {
-    if(nameToCheckAgainst == catsStruct[index].name){
+int catNameEquality( int index, char nameToCheckAgainst[] ) {
+    if((!strcmp( nameToCheckAgainst, catsStruct[index].name))){
         return 1;
     }
     else {
@@ -23,11 +24,11 @@ int catNameEquality(int index, char nameToCheckAgainst[] ) {
     }
 }
 
-int checkForEmptyName(int index ) {
-    if(catsStruct[index].name){
-        return 1;
+int checkForEmptyName( int index ) {
+    if(catsStruct[index].name == '\0'){
+        return 0;
     }
     else {
-        return 0;
+        return 1;
     }
 }
