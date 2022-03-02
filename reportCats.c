@@ -89,7 +89,7 @@ void printAllCats(void){
    return;
 }
 
-int findCats( const char nameToFind[] ){
+int findCats( char nameToFind[] ){
    int index = 0;
    printf("Looking for %s's Index \n", nameToFind);
    while(index != MAX_CATS){
