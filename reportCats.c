@@ -94,6 +94,9 @@ int findCats( char nameToFind[] ){
    printf("Looking for %s's Index \n", nameToFind);
    while(index != MAX_CATS){
        if(catNameExists(index, nameToFind)){
+           if(!catNameExists( index, nameToFind )){
+               printf("%s is located at index %d", nameToFind, index);
+           }
            return index;
        }
       index++;

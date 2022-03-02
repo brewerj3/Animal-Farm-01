@@ -9,8 +9,6 @@
 /// @date   25_Feb_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <stdio.h>
-#include <stdbool.h>
 #include <string.h>
 
 #include "catDatabase.h"
