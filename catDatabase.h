@@ -19,11 +19,8 @@
 enum Gender{UNKNOWN_GENDER, MALE, FEMALE};
 
 enum Breed{UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
-extern enum breed isBreed;
 
 enum Color{BLACK, WHITE, RED, BLUE, GREEN, PINK};
-extern enum color collarColor1;
-extern enum color collarColor2;
 
 extern int currentNumberOfCats;
 
