@@ -36,10 +36,8 @@ void updateCatName( const int index, char newName[] ) {
 
        indexSearch++;
    }
-   else{
-        strcpy(catsStruct[index].name, newName);
-        return;
-    }
+   strcpy(catsStruct[index].name, newName);
+   return;
 }
 
 void fixCat( const int index ) {
