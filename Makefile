@@ -21,7 +21,7 @@ catDatabase.o: catDatabase.h catDatabase.c config.h
 		$(CC) $(CFLAGS) -c catDatabase.c
 
 catValidation.o: catValidation.c catValidation.h
-		$(CC) $(CFLAGS) -c catvalidation.c
+		$(CC) $(CFLAGS) -c catValidation.c
 
 addCats.o: addCats.c addCats.h 
 		$(CC) $(CFLAGS) -c addCats.c
