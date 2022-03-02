@@ -21,7 +21,6 @@ int catNameExists( int index, char nameToCheckAgainst[] ) {
         return 1;
     }
     else {
-        fprintf(stderr, "%s: %s is already named that at %i \n", PROGRAM_NAME, nameToCheckAgainst, index);
         return 0;
     }
 }

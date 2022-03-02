@@ -106,4 +106,3 @@ int findCats( char nameToFind[] ){
       return index;
    }
 }
-
