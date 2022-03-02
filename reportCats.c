@@ -8,16 +8,16 @@
 /// @author Joshua Brewer <brewerj3@hawaii.edu>
 /// @date   25_Feb_2022
 ///////////////////////////////////////////////////////////////////////////////
-#include <string.h>
+
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "catDatabase.h"
 #include "reportCats.h"
 #include "config.h"
 #include "catValidation.h"
 
 char* colorCollar( const int color ){
-
     switch(color){
         case 0 :
             return "Black";
