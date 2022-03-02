@@ -15,10 +15,10 @@ extern int updateCatName( const int index, char newName[] );
 
 extern void fixCat( const int index );
 
-extern int updateCatWeight( const int index, float newWeight );
+extern void updateCatWeight( const int index, float newWeight );
 
-void updateCatCollar1( const int index, enum color collarColor1 );
+extern void updateCatCollar1( const int index, enum color collarColor1 );
 
-void updateCatCollar2( const int index, enum color collarColor2 );
+extern void updateCatCollar2( const int index, enum color collarColor2 );
 
-void updateLicense( const int index, unsigned long long license );
+extern void updateLicense( const int index, unsigned long long license );
