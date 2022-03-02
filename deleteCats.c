@@ -19,9 +19,7 @@
 void deleteAllCats(){
    printf("Deleting all cats. \n");
    currentNumberOfCats = 0;
-   int index = 0;
    memset(catsStruct, 0, sizeof(catsStruct));
-   }
 }
 
 
