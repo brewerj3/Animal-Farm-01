@@ -11,14 +11,14 @@
 
 #pragma once
 
-extern int updateCatName( int index, char newName[] );
+extern int updateCatName( const int index, char newName[] );
 
-extern int fixCat( int index );
+extern void fixCat( const int index );
 
-extern int updateCatWeight( int index, float newWeight );
+extern int updateCatWeight( const int index, float newWeight );
 
-void updateCatCollar1( int index, enum color collarColor1 );
+void updateCatCollar1( const int index, enum color collarColor1 );
 
-void updateCatCollar2( int index, enum color collarColor2 );
+void updateCatCollar2( const int index, enum color collarColor2 );
 
-void updateLicense( int index, unsigned long long license );
+void updateLicense( const int index, unsigned long long license );

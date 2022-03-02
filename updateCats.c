@@ -19,7 +19,7 @@
 #include "catValidation.h"
 
 
-int updateCatName( int index, char newName[] ) {
+int updateCatName( const int index, char newName[] ) {
    if(strlen(newName) == 0){ //Check if new name is empty
       exit(EXIT_FAILURE);
    }
@@ -35,36 +35,42 @@ int updateCatName( int index, char newName[] ) {
    return 0;
 }
 
-int fixCat( int index ) {
+void fixCat( const int index ) {
+    if( !isValidIndex( index )){ //checks if index is a valid index
+        return 0;
+    }
     if(checkForEmptyName( index )) {//checks if the index is empty
         catsStruct[index].isFixed = true;
     }
     return 0;
 }
 
-int updateCatWeight( int index, float newWeight ) {
-   if( !isValidWeight(newWeight) ) {
-      exit(EXIT_FAILURE);
-   }
-   if(checkForEmptyName( index )) {
+int updateCatWeight( const int index, float newWeight ) {
+    if(!isValidIndex( index ) ) {
+        return 0;
+    }
+    if( !isValidWeight(newWeight) ) {
+      return 0;
+    }
+    if(checkForEmptyName( index )) {
       catsStruct[index].weight = newWeight;
-   }
-   return 0;
+    }
+    return 0;
 }
 
-void updateCatCollar1( int index, enum color collarColor1 ){
+void updateCatCollar1( const int index, enum color collarColor1 ){
     if(checkForEmptyName( index )) {
         catsStruct[index].color1 = collarColor1;
     }
 }
 
-void updateCatCollar2( int index, enum color collarColor2 ){
+void updateCatCollar2( const int index, enum color collarColor2 ){
     if(checkForEmptyName( index )) {
         catsStruct[index].color2 = collarColor2;
     }
 }
 
-void updateLicense( int index, unsigned long long license ){
+void updateLicense( const int index, unsigned long long license ){
     if(checkForEmptyName( index )) {
         catsStruct[index].license = license;
     }

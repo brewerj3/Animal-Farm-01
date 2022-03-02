@@ -16,7 +16,7 @@
 #include "catDatabase.h"
 #include "config.h"
 
-int catNameExists( int index, char nameToCheckAgainst[] ) {
+int catNameExists( const int index, char nameToCheckAgainst[] ) {
     if((!strcmp( nameToCheckAgainst, catsStruct[index].name))){
         return 1;
     }
@@ -25,7 +25,7 @@ int catNameExists( int index, char nameToCheckAgainst[] ) {
     }
 }
 
-int checkForEmptyName( int index ) {
+int checkForEmptyName( const int index ) {
     if(catsStruct[index].name[0] == '\0'){
         return 0;
     }

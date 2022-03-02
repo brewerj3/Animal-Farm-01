@@ -11,9 +11,9 @@
 
 #pragma once
 
-extern int catNameExists( int index, char nameToCheckAgainst[] ) ;
+extern int catNameExists( const int index, char nameToCheckAgainst[] ) ;
 
-extern int checkForEmptyName( int index ) ;
+extern int checkForEmptyName( const int index ) ;
 
 extern bool isValidIndex( const int index ) ;
 
