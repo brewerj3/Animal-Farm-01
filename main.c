@@ -8,7 +8,7 @@
 /// @author Joshua Brewer <brewerj3@hawaii.edu>
 /// @date   25_Feb_2022
 ///////////////////////////////////////////////////////////////////////////////
-#include <stdlib.h>
+
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -17,7 +17,6 @@
 #include "deleteCats.h"
 #include "reportCats.h"
 #include "updateCats.h"
-#include "catValidation.h"
 #include "config.h"
 
 int main(){
