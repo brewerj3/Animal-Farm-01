@@ -17,7 +17,6 @@
 #include <stdbool.h>
 
 enum Gender{UNKNOWN_GENDER, MALE, FEMALE};
-extern enum gender isGender;
 
 enum Breed{UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
 extern enum breed isBreed;
