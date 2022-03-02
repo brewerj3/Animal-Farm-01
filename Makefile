@@ -11,7 +11,7 @@
 ### @see https://www.gnu.org/software/make/manual/make.html
 ###############################################################################
 CC		 = gcc
-CFLAGS = -g -Wall -Wextra
+CFLAGS = -g -Wall -Wextra --DDEBUG
 
 TARGET = animalFarm
 

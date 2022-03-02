@@ -35,7 +35,6 @@ struct Cat {
     int color1;
     int color2;
     unsigned long long license;
-
 };
 
 extern struct Cat catsStruct[MAX_CATS];

@@ -8,10 +8,6 @@
 /// @author Joshua Brewer <brewerj3@hawaii.edu>
 /// @date   25_Feb_2022
 ///////////////////////////////////////////////////////////////////////////////
-
-
-
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -25,8 +21,6 @@
 
 int main(){
    printf( "Starting %s \n", PROGRAM_NAME );
-
-
 
    addCat( "Loki",   MALE,           PERSIAN,    true,  8.5,   BLACK,  WHITE,  101 );
    addCat( "Milo",   MALE,           MANX,       true,  7.0,   BLACK,  RED,    102 );
