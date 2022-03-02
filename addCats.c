@@ -35,7 +35,7 @@ int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isF
         fprintf( stderr, "%s: Length of string is greater than max name length\n", PROGRAM_NAME);
         return 0;
     }
-    if( !isValidWeight( weightNew ){
+    if( !isValidWeight( weightNew )) {
         return 0;
     }
     else {
@@ -59,4 +59,3 @@ int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isF
         return index;
     }
 }
-
