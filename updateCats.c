@@ -12,6 +12,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 #include "catDatabase.h"
 #include "updateCats.h"
@@ -20,19 +21,25 @@
 
 
 void updateCatName( const int index, char newName[] ) {
-   if(strlen(newName) == 0){ //Check if new name is empty
+   if( !isValidName(newName) ) { //Check if new name is a valid name
       exit(EXIT_FAILURE);
    }
-   if( !isValidIndex(index) ){
+   if( !isValidIndex(index) ){ //check if index is valid
        exit(EXIT_FAILURE);
    }
    int indexSearch = 0;
    while( indexSearch != MAX_CATS ) { // Search for existing cat with same name as new name
-       catNameExists(indexSearch, newName);
+       if(!catNameExists(indexSearch, newName)) {
+           fprintf(stderr, "%s: cannot rename %s to %s as the cat at index: %d is already named %s", PROGRAM_NAME, catsStruct[index].name, newName, indexSearch, catsStruct[indexSearch].name);
+           return;
+       }
+
        indexSearch++;
    }
-   strcpy(catsStruct[index].name, newName);
-   return;
+   else{
+        strcpy(catsStruct[index].name, newName);
+        return;
+    }
 }
 
 void fixCat( const int index ) {

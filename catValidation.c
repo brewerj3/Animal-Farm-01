@@ -16,12 +16,12 @@
 #include "catDatabase.h"
 #include "config.h"
 
-int catNameExists( const int index, char nameToCheckAgainst[] ) {
+bool catNameExists( const int index, char nameToCheckAgainst[] ) {
     if((!strcmp( nameToCheckAgainst, catsStruct[index].name))){
-        return 1;
+        return true;
     }
     else {
-        return 0;
+        return false;
     }
 }
 
