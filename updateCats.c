@@ -19,7 +19,7 @@
 #include "catValidation.h"
 
 
-int updateCatName( const int index, char newName[] ) {
+void updateCatName( const int index, char newName[] ) {
    if(strlen(newName) == 0){ //Check if new name is empty
       exit(EXIT_FAILURE);
    }
@@ -32,7 +32,7 @@ int updateCatName( const int index, char newName[] ) {
        indexSearch++;
    }
    strcpy(catsStruct[index].name, newName);
-   return 0;
+   return;
 }
 
 void fixCat( const int index ) {

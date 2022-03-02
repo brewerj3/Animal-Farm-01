@@ -16,7 +16,7 @@
 #include "config.h"
 #include "catValidation.h"
 
-char* colorCollar( int color ){
+char* colorCollar( const int color ){
 
     switch(color){
         case 0 :
@@ -35,7 +35,7 @@ char* colorCollar( int color ){
     return 0;
 }
 
-char* genderOfCat( int gender ){
+char* genderOfCat( const int gender ){
     switch(gender){
         case 0 :
             return "Unknown gender";
@@ -47,7 +47,7 @@ char* genderOfCat( int gender ){
     return 0;
 }
 
-char* breedOfCat( int breed ){
+char* breedOfCat( const int breed ){
     switch(breed) {
         case 0 :
             return "Unknown Breed";
@@ -65,7 +65,7 @@ char* breedOfCat( int breed ){
     return 0;
 }
 
-int printCat( int index ) {
+void printCat( const int index ) {
    if( ( catsStruct[index].name[0] == '\0'  ) || (index < 0) || (index > MAX_CATS) ){
       fprintf(stderr, "%s: Bad cat [%d] \n", PROGRAM_NAME, index);
       return 0;
@@ -77,7 +77,7 @@ int printCat( int index ) {
    return 0;
 }
 
-int printAllCats(void){
+void printAllCats(void){
    int index = 0;
    if(currentNumberOfCats == 0){
       fprintf( stderr, "%s: There are no cats in this database \n", PROGRAM_NAME);
@@ -86,10 +86,10 @@ int printAllCats(void){
        printf("cat index = [%u] name = [%s] gender=[%s] breed=[%s] isFixed=[%d] weight=[%4.4f] collarColor1=[%s] collarColor2=[%s] license=[%llu] \n", index, catsStruct[index].name, genderOfCat(catsStruct[index].gender), breedOfCat(catsStruct[index].breed), catsStruct[index].isFixed, catsStruct[index].weight, colorCollar(catsStruct[index].color1), colorCollar(catsStruct[index].color2), catsStruct[index].license);
       index++;
    }
-   return 0;
+   return;
 }
 
-int findCats( char nameToFind[] ){
+int findCats( const char nameToFind[] ){
    int index = 0;
    printf("Looking for %s's Index \n", nameToFind);
    while(index != MAX_CATS){

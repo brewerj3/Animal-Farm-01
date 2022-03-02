@@ -11,13 +11,13 @@
 
 #pragma once
 
-extern char* colorCollar( int color );
+extern char* colorCollar( const int color );
 
-char* genderOfCat( int gender );
+extern char* genderOfCat( const int gender );
 
-extern int printCat( int index );
+extern void printCat( const int index );
 
-extern int printAllCats();
+extern void printAllCats();
 
-extern int findCats( char nameToFind[] );
+extern int findCats( const char nameToFind[] );
 

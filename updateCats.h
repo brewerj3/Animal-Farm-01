@@ -11,7 +11,7 @@
 
 #pragma once
 
-extern int updateCatName( const int index, char newName[] );
+extern void updateCatName( const int index, char newName[] );
 
 extern void fixCat( const int index );
 
