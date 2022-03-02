@@ -10,3 +10,5 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 extern int catNameEquality(int index, char nameToCheckAgainst[] ) ;
+
+extern int checkForEmptyName(int index ) {

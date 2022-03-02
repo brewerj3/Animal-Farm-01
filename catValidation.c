@@ -23,6 +23,11 @@ int catNameEquality(int index, char nameToCheckAgainst[] ) {
     }
 }
 
-int checkForEmptyName(int index, char nameToCheckAgainst[] ) {
-    if(catsStruct[index].name)
+int checkForEmptyName(int index ) {
+    if(catsStruct[index].name){
+        return 1;
+    }
+    else {
+        return 0;
+    }
 }
