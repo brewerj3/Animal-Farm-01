@@ -14,3 +14,5 @@
 extern int catNameExists( int index, char nameToCheckAgainst[] ) ;
 
 extern int checkForEmptyName( int index ) ;
+
+bool isValidIndex( int index ) ;

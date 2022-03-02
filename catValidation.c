@@ -10,6 +10,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <string.h>
+#include <stdbool.h>
 
 #include "catDatabase.h"
 #include "config.h"
@@ -30,4 +31,15 @@ int checkForEmptyName( int index ) {
     else {
         return 1;
     }
+}
+
+bool isValidIndex( int index ) {
+    if(index < 0){
+        return false;
+    }
+    if(index > MAX_CATS){
+        return false;
+    }
+    else
+        return true;
 }
