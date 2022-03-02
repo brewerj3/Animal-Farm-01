@@ -57,3 +57,18 @@ bool isValidWeight( const float checkWeight ) {
         return true;
     }
 }
+
+bool isValidName(char nameToCheck[] ) {
+    int nameLength = strlen(nameToCheck);
+    if( nameLength <= 0 ) {
+        fprintf( stderr, "%s: length of name is: %d which is less than or equal to 0 therefore it is invalid. \n", PROGRAM_NAME, nameLength);
+        return false;
+    }
+    if( nameLength > MAX_NAME_LENGTH ) {
+        fprintf( stderr, "%s name length is: %d is longer than Maximum name length allowed which is %d \n", PROGRAM_NAME, nameLength, MAX_NAME_LENGTH);
+        return false;
+    }
+    else{
+        return true;
+    }
+}

@@ -25,14 +25,8 @@ int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isF
         return 0;
     }
 
-    int lengthOfString = strlen(nameToAdd);
-
-    if(lengthOfString <= 0){
-        fprintf( stderr, "%s: Length of string equals 0\n",PROGRAM_NAME);
-        return 0;
-    }
-    if(lengthOfString > MAX_NAME_LENGTH){
-        fprintf( stderr, "%s: Length of string is greater than max name length\n", PROGRAM_NAME);
+    if( !isValidName(nameToAdd) ) {
+        fprintf( stderr, "%s: the name is not valid \n", PROGRAM_NAME);
         return 0;
     }
     if( !isValidWeight( weightNew )) {
