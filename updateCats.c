@@ -23,6 +23,9 @@ int updateCatName( int index, char newName[] ) {
    if(strlen(newName) == 0){ //Check if new name is empty
       exit(EXIT_FAILURE);
    }
+   if( !isValidIndex(index) ){
+       exit(EXIT_FAILURE);
+   }
    int indexSearch = 0;
    while( indexSearch != MAX_CATS ) { // Search for existing cat with same name as new name
        catNameExists(indexSearch, newName);
@@ -40,7 +43,7 @@ int fixCat( int index ) {
 }
 
 int updateCatWeight( int index, float newWeight ) {
-   if(newWeight <= 0){
+   if( !isValidWeight(newWeight) ) {
       exit(EXIT_FAILURE);
    }
    if(checkForEmptyName( index )) {

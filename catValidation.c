@@ -36,9 +36,11 @@ int checkForEmptyName( int index ) {
 
 bool isValidIndex( const int index ) {
     if(index < 0){
+        fprintf( stderr, "%s: %d is too small, it must be greater than or equal to %d \n", PROGRAM_NAME, index, MAX_CATS);
         return false;
     }
     if(index > MAX_CATS){
+        fprintf( stderr, "%s: %d is too large, it must be less than or equal to %d \n ", PROGRAM_NAME, index, MAX_CATS);
         return false;
     }
     else{
@@ -48,7 +50,7 @@ bool isValidIndex( const int index ) {
 
 bool isValidWeight( const float checkWeight ) {
     if(checkWeight <= 0){
-        fprintf( stderr, "%s cats cat have negative mass, that would break physics. \n", PROGRAM_NAME );
+        fprintf( stderr, "%s: cats cat have negative mass, that would break physics. \n", PROGRAM_NAME );
         return false;
     }
     else {
