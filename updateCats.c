@@ -37,25 +37,25 @@ int updateCatName( const int index, char newName[] ) {
 
 void fixCat( const int index ) {
     if( !isValidIndex( index )){ //checks if index is a valid index
-        return 0;
+        return;
     }
     if(checkForEmptyName( index )) {//checks if the index is empty
         catsStruct[index].isFixed = true;
     }
-    return 0;
+    return;
 }
 
-int updateCatWeight( const int index, float newWeight ) {
+void updateCatWeight( const int index, float newWeight ) {
     if(!isValidIndex( index ) ) {
-        return 0;
+        return;
     }
     if( !isValidWeight(newWeight) ) {
-      return 0;
+      return;
     }
     if(checkForEmptyName( index )) {
       catsStruct[index].weight = newWeight;
     }
-    return 0;
+    return;
 }
 
 void updateCatCollar1( const int index, enum color collarColor1 ){
