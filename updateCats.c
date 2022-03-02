@@ -45,8 +45,8 @@ int updateCatWeight( int index, float newWeight ) {
    }
    if(checkForEmptyName( index )) {
       catsStruct[index].weight = newWeight;
-      return 0;
    }
+   return 0;
 }
 
 void updateCatCollar1( int index, enum color collarColor1 ){
