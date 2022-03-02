@@ -17,6 +17,7 @@
 #include "deleteCats.h"
 #include "reportCats.h"
 #include "updateCats.h"
+#include "catValidation.h"
 #include "config.h"
 
 int main(){

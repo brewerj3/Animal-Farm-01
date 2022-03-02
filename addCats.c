@@ -41,11 +41,7 @@ int addCat( char nameToAdd[], enum gender isGender, enum breed isBreed, bool isF
     }
     else {
         int index = 0;
-        while(MAX_CATS != index) { //looking to see if name already exists
-            if(catNameEquality(index, nameToAdd)) {
-                fprintf( stderr, "%s: Name already exists\n", PROGRAM_NAME);//print if name of cat already exists
-                return 0;
-            }
+        while(catNameExists( index, nameToAdd )) { //looking to see if name already exists
             index++;
         }
         index = 0; //reset index to look for empty location.

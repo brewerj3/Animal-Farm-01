@@ -10,54 +10,59 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <string.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
 #include "catDatabase.h"
 #include "updateCats.h"
 #include "config.h"
+#include "catValidation.h"
 
 
-int updateCatName( int index, char newName[] ){
+int updateCatName( int index, char newName[] ) {
    if(strlen(newName) == 0){ //Check if new name is empty
       exit(EXIT_FAILURE);
    }
    int indexSearch = 0;
    while( indexSearch != MAX_CATS ) { // Search for existing cat with same name as new name
-       if((!strcmp(newName, catsStruct[indexSearch].name))){ //Check if a cat is already named newName
-           fprintf( stderr, "%s: %s cannot be named %s: as %s is already named that at index %d \n", PROGRAM_NAME, catsStruct[index].name, newName, catsStruct[indexSearch].name, indexSearch);
-           return 0;
-       }
-      indexSearch++;
+       catNameExists(indexSearch, newName);
+       indexSearch++;
    }
    strcpy(catsStruct[index].name, newName);
    return 0;
 }
 
-int fixCat( int index ){
-    catsStruct[index].isFixed = true;
+int fixCat( int index ) {
+    if(checkForEmptyName( index )) {//checks if the index is empty
+        catsStruct[index].isFixed = true;
+    }
     return 0;
 }
 
-int updateCatWeight( int index, float newWeight ){
+int updateCatWeight( int index, float newWeight ) {
    if(newWeight <= 0){
       exit(EXIT_FAILURE);
    }
-   else {
+   if(checkForEmptyName( index )) {
       catsStruct[index].weight = newWeight;
       return 0;
    }
 }
 
 void updateCatCollar1( int index, enum color collarColor1 ){
-    catsStruct[index].color1 = collarColor1;
+    if(checkForEmptyName( index )) {
+        catsStruct[index].color1 = collarColor1;
+    }
 }
 
 void updateCatCollar2( int index, enum color collarColor2 ){
-    catsStruct[index].color2 = collarColor2;
+    if(checkForEmptyName( index )) {
+        catsStruct[index].color2 = collarColor2;
+    }
 }
 
 void updateLicense( int index, unsigned long long license ){
-    catsStruct[index].license = license;
+    if(checkForEmptyName( index )) {
+        catsStruct[index].license = license;
+    }
 }

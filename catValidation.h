@@ -9,6 +9,6 @@
 /// @date   25_Feb_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-extern int catNameEquality( int index, char nameToCheckAgainst[] ) ;
+extern int catNameExists( int index, char nameToCheckAgainst[] ) ;
 
 extern int checkForEmptyName( int index ) ;
