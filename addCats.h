@@ -12,10 +12,10 @@
 #pragma once
 
 extern int addCat( char nameToAdd[],
-                   enum gender isGender,
-                   enum breed isBreed,
+                   enum Gender isGender,
+                   enum Breed isBreed,
                    bool isFixedNew,
                    float weightNew,
-                   enum color collarColor1,
-                   enum color collarColor2,
+                   enum Color collarColor1,
+                   enum Color collarColor2,
                    unsigned long long license ) ;

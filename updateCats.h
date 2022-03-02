@@ -17,8 +17,8 @@ extern void fixCat( const int index );
 
 extern void updateCatWeight( const int index, float newWeight );
 
-extern void updateCatCollar1( const int index, enum color collarColor1 );
+extern void updateCatCollar1( const int index, enum Color collarColor1 );
 
-extern void updateCatCollar2( const int index, enum color collarColor2 );
+extern void updateCatCollar2( const int index, enum Color collarColor2 );
 
 extern void updateLicense( const int index, unsigned long long license );

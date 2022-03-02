@@ -62,13 +62,13 @@ void updateCatWeight( const int index, float newWeight ) {
     return;
 }
 
-void updateCatCollar1( const int index, enum color collarColor1 ){
+void updateCatCollar1( const int index, enum Color collarColor1 ){
     if(checkForEmptyName( index )) {
         catsStruct[index].color1 = collarColor1;
     }
 }
 
-void updateCatCollar2( const int index, enum color collarColor2 ){
+void updateCatCollar2( const int index, enum Color collarColor2 ){
     if(checkForEmptyName( index )) {
         catsStruct[index].color2 = collarColor2;
     }

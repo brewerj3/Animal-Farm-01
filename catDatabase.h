@@ -16,13 +16,13 @@
 
 #include <stdbool.h>
 
-enum gender{UNKNOWN_GENDER, MALE, FEMALE};
+enum Gender{UNKNOWN_GENDER, MALE, FEMALE};
 extern enum gender isGender;
 
-enum breed{UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
+enum Breed{UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
 extern enum breed isBreed;
 
-enum color{BLACK, WHITE, RED, BLUE, GREEN, PINK};
+enum Color{BLACK, WHITE, RED, BLUE, GREEN, PINK};
 extern enum color collarColor1;
 extern enum color collarColor2;
 
