@@ -49,7 +49,7 @@ void fixCat( const int index ) {
     return;
 }
 
-void updateCatWeight( const int index, float newWeight ) {
+void updateCatWeight( const int index, Weight newWeight ) {
     if(!isValidIndex( index ) ) {
         return;
     }

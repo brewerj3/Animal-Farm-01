@@ -48,7 +48,7 @@ bool isValidIndex( const int index ) {
     }
 }
 
-bool isValidWeight( const float checkWeight ) {
+bool isValidWeight( const Weight checkWeight ) {
     if(checkWeight <= 0){
         fprintf( stderr, "%s: cats cat have negative mass, that would break physics. \n", PROGRAM_NAME );
         return false;
