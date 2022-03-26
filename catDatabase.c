@@ -12,6 +12,6 @@
 #include "catDatabase.h"
 #include "config.h"
 
-int currentNumberOfCats=0;
+NumCats currentNumberOfCats=0;
 
 struct Cat catsStruct[MAX_CATS];

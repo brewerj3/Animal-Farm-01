@@ -22,9 +22,11 @@ enum Breed{UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
 
 enum Color{BLACK, WHITE, RED, BLUE, GREEN, PINK};
 
-extern int currentNumberOfCats;
-
 typedef float Weight;
+
+typedef int NumCats;
+
+extern NumCats currentNumberOfCats;
 
 struct Cat {
     char name[MAX_NAME_LENGTH];
